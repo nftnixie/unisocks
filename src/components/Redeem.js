@@ -36,7 +36,7 @@ export function Controls({ closeCheckout, theme, type }) {
     <FrameControls>
       <Unicorn theme={theme}>
         <span role="img" aria-label="unicorn">
-          🦄
+          
         </span>{' '}
         Pay{' '}
         <span style={{ color: '#737373' }}>
@@ -95,7 +95,7 @@ export default function Redeem({
         <ButtonFrame
           className="button"
           disabled={false}
-          text={account === null ? 'Connect Wallet' : 'Redeem SOCKS'}
+          text={account === null ? 'Connect Wallet' : 'Redeem NIXIE'}
           type={'cta'}
           onClick={() => {
             setConnector('Injected', { suppressAndThrowErrors: true }).catch(() => {
@@ -113,7 +113,7 @@ export default function Redeem({
             <InfoFrame pending={pending}>
               <Owned>
                 <SockCount>You own {balanceSOCKS && `${amountFormatter(balanceSOCKS, 18, 0)}`}</SockCount>
-                <p>Redeem SOCKS</p>
+                <p>Redeem NIXIE</p>
               </Owned>
               <IncrementToken
                 initialValue={Number(amountFormatter(balanceSOCKS, 18, 0))}
@@ -142,8 +142,8 @@ export default function Redeem({
             <InfoFrame hasPickedAmount={hasPickedAmount}>
               <ImgStyle src={test} alt="Logo" hasPickedAmount={hasPickedAmount} />
               <Owned>
-                <p>{state.count} Unisocks</p>
-                <p style={{ fontSize: '20px', fontWeight: '400', color: '#AEAEAE' }}>One size fits most</p>
+                <p>{state.count} NFT Nixie</p>
+                <p style={{ fontSize: '20px', fontWeight: '400', color: '#AEAEAE' }}>Authentic NIXIE Tube Clock</p>
                 <p style={{ fontSize: '14px', fontWeight: '500', marginTop: '16px', color: '#AEAEAE' }}>Edition 0</p>
               </Owned>
             </InfoFrame>
@@ -177,8 +177,8 @@ export default function Redeem({
             <InfoFrame hasPickedAmount={hasPickedAmount}>
               <ImgStyle src={test} alt="Logo" hasPickedAmount={hasPickedAmount} />
               <Owned>
-                <p style={{ fontSize: '18px' }}>{state.count} Unisocks</p>
-                <p style={{ fontSize: '14px', fontWeight: '500' }}>One size fits most</p>
+                <p style={{ fontSize: '18px' }}>{state.count} NFT Nixie Hardware</p>
+                <p style={{ fontSize: '14px', fontWeight: '500' }}>The physical clock</p>
                 <p
                   style={{
                     fontSize: '12px',
@@ -196,8 +196,8 @@ export default function Redeem({
               <ImgStyle src={nfc} alt="Logo" hasPickedAmount={hasPickedAmount} />
               <Bonus>Bonus</Bonus>
               <Owned>
-                <p style={{ fontSize: '18px' }}>{state.count} Unisocks NFT</p>
-                <p style={{ fontSize: '14px', fontWeight: '500' }}>Digital Collectible (10kb)</p>
+                <p style={{ fontSize: '18px' }}>{state.count} NFT Nixie NFT</p>
+                <p style={{ fontSize: '14px', fontWeight: '500' }}>Digital Collectible and Authenticity Receipt</p>
                 <p
                   style={{
                     fontSize: '12px',
@@ -227,7 +227,7 @@ export default function Redeem({
             disabled={pending}
             pending={pending}
             // text={pending ? `Waiting for confirmation...` : `Redeem ${numberBurned} SOCKS`}
-            text={pending ? `Waiting for confirmation...` : `Place order (Redeem ${numberBurned} SOCKS) `}
+            text={pending ? `Waiting for confirmation...` : `Place order (Redeem ${numberBurned} NIXIE) `}
             type={'cta'}
             onClick={() => {
               burn(numberBurned.toString())
@@ -269,7 +269,7 @@ export default function Redeem({
             <ImgStyle src={sent} alt="Logo" hasPickedAmount={hasPickedAmount} hasBurnt={hasBurnt} />
             <InfoFrame>
               <Owned>
-                <p>You got socks!</p>
+                <p>You got a NFT Nixie!</p>
               </Owned>
             </InfoFrame>
           </TopFrame>

@@ -106,13 +106,13 @@ export default function BuyAndSell({
         if (pending && hash) {
           return 'Waiting for confirmation'
         } else {
-          return 'Sell Socks'
+          return 'Sell NIXIE'
         }
       } else {
         if (pending && hash) {
           return 'Waiting for confirmation'
         } else {
-          return 'Buy Socks'
+          return 'Buy NIXIE'
         }
       }
     } else {
@@ -205,7 +205,7 @@ export default function BuyAndSell({
         {/* <button onClick={() => fake()}>test</button> */}
         <Unicorn>
           <span role="img" aria-label="unicorn">
-            🦄
+            
           </span>{' '}
           Pay
         </Unicorn>
@@ -244,7 +244,7 @@ export default function BuyAndSell({
       )}
       {shouldRenderUnlock ? (
         <ButtonFrame
-          text={`Unlock ${buying ? selectedTokenSymbol : 'SOCKS'}`}
+          text={`Unlock ${buying ? selectedTokenSymbol : 'NIXIE'}`}
           type={'cta'}
           pending={pending}
           onClick={() => {

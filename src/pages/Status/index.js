@@ -69,7 +69,7 @@ export default function Body({ totalSupply, ready, balanceSOCKS }) {
         <Header totalSupply={totalSupply} ready={ready} balanceSOCKS={balanceSOCKS} setShowConnect={() => {}} />
         <Content>
           <p>
-            You can use this page to check the status of your Unisocks order, please bookmark it for future reference.
+            You can use this page to check the status of your NFT Nixie order, please bookmark it for future reference.
           </p>
 
           {error && <p>Error</p>}
@@ -91,7 +91,7 @@ export default function Body({ totalSupply, ready, balanceSOCKS }) {
                           timeStyle: 'short'
                         })}
                       </li>
-                      <li>SOCKS Redeemed: {d.numberOfSocks}</li>
+                      <li>NIXIE Redeemed: {d.numberOfSocks}</li>
                       <li>
                         Status:{' '}
                         {d.invalid
@@ -133,7 +133,7 @@ export default function Body({ totalSupply, ready, balanceSOCKS }) {
           <p style={{ fontSize: '.75rem', textAlign: 'center' }}>
             Problem with an order?{' '}
             <a
-              href={`mailto:contact@uniswap.io?Subject=Unipig%20Order%20for%20${account}`}
+              href={`mailto:nftnixie@protonmail.com?Subject=NFTNixie%20Order%20for%20${account}`}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -149,7 +149,7 @@ export default function Body({ totalSupply, ready, balanceSOCKS }) {
 
 const AppWrapper = styled.div`
   width: 100vw;
-  height: 100%;
+  height: 100vw;
   margin: 0px auto;
   margin-bottom: 1rem;
   display: flex;
@@ -159,10 +159,13 @@ const AppWrapper = styled.div`
   overflow: ${props => (props.overlay ? 'hidden' : 'scroll')};
   scroll-behavior: smooth;
   position: ${props => (props.overlay ? 'fixed' : 'initial')};
+  background-color: #000;
 `
 
 const Content = styled.div`
   width: calc(100vw - 32px);
   max-width: 375px;
   margin-top: 72px;
+  background-color: #000;
+  color: #ccc;
 `

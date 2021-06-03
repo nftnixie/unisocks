@@ -23,7 +23,7 @@ function Controls({ closeCheckout }) {
     <FrameControls>
       <Unicorn>
         <span role="img" aria-label="unicorn">
-          🦄
+          
         </span>{' '}
         Pay
       </Unicorn>
@@ -118,7 +118,7 @@ export default function Confirmed({ hash, type, amount, clearLastTransaction, cl
           <ImgStyle src={sent} alt="Logo" />
           <InfoFrame>
             <Owned>
-              <p>You sold socks!</p>
+              <p>You sold NIXIE!</p>
             </Owned>
           </InfoFrame>
         </TopFrame>

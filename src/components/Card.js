@@ -14,8 +14,8 @@ export default function Card({ totalSupply, dollarPrice, reserveSOCKSToken }) {
       options={{ scale: 1.01, max: 10, glare: true, 'max-glare': 1, speed: 1000 }}
     >
       <CardWrapper>
-        <Title>Unisocks Edition 0</Title>
-        <SubTitle>$SOCKS</SubTitle>
+        <Title>NFT Nixie Edition 0</Title>
+        <SubTitle>$NIXIE</SubTitle>
         <Gallery />
         <MarketData>
           <span>
@@ -65,7 +65,7 @@ const Title = styled.p`
 `
 
 const SubTitle = styled.p`
-  color: #6c7284;
+  color: #dfba3f;
   font-family: Inter;
   font-style: normal;
   font-weight: 500;
@@ -77,7 +77,7 @@ const SubTitle = styled.p`
 `
 
 const SockCount = styled.p`
-  color: #aeaeae;
+  color: #dfba3f;
   font-weight: 400;
   margin: 0px;
   font-size: 12px;

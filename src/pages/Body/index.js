@@ -24,9 +24,9 @@ export function Header({ totalSupply, ready, balanceSOCKS, setShowConnect }) {
       <Link to="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
         <Unicorn>
           <span role="img" aria-label="unicorn">
-            🦄
+            
           </span>{' '}
-          Unisocks
+          NFT Nixie
         </Unicorn>
       </Link>
       <div style={{ display: 'flex', flexDirection: 'row' }}>
@@ -43,7 +43,7 @@ export function Header({ totalSupply, ready, balanceSOCKS, setShowConnect }) {
         <Account onClick={() => handleAccount()} balanceSOCKS={balanceSOCKS}>
           {account ? (
             balanceSOCKS > 0 ? (
-              <SockCount>{balanceSOCKS && `${amountFormatter(balanceSOCKS, 18, 0)}`} SOCKS</SockCount>
+              <SockCount>{balanceSOCKS && `${amountFormatter(balanceSOCKS, 18, 0)}`} NIXIE</SockCount>
             ) : (
               <SockCount>{account.slice(0, 6)}...</SockCount>
             )
@@ -72,10 +72,11 @@ const HeaderFrame = styled.div`
 `
 
 const Account = styled.div`
-  background-color: ${props => (props.balanceSOCKS ? '#f1f2f6' : props.theme.blue)};
+  background-color: ${props => (props.balanceSOCKS ? '#000' : props.theme.blue)};
   padding: 0.75rem;
   border-radius: 6px;
   cursor: ${props => (props.balanceSOCKS ? 'auto' : 'pointer')};
+  color: #fff;
 
   transform: scale(1);
   transition: transform 0.3s ease;
@@ -173,7 +174,7 @@ export default function Body({
       <Content>
         <Card totalSupply={totalSupply} dollarPrice={dollarPrice} reserveSOCKSToken={reserveSOCKSToken} />{' '}
         <Info>
-          <div style={{ marginBottom: '4px' }}>Buy and sell real socks with digital currency.</div>
+          <div style={{ marginBottom: '4px' }}>Buy and sell real hardware with digital currency.</div>
           <div style={{ marginBottom: '4px' }}>
             Delivered on demand.{' '}
             <a
@@ -239,7 +240,7 @@ export default function Body({
 
 const AppWrapper = styled.div`
   width: 100vw;
-  height: 100%;
+  height: 100vw;
   margin: 0px auto;
   margin-bottom: 1rem;
   display: flex;
@@ -249,12 +250,14 @@ const AppWrapper = styled.div`
   overflow: ${props => (props.overlay ? 'hidden' : 'scroll')};
   scroll-behavior: smooth;
   position: ${props => (props.overlay ? 'fixed' : 'initial')};
+  background-color: #000;
 `
 
 const Content = styled.div`
   width: calc(100vw - 32px);
   max-width: 375px;
   margin-top: 72px;
+  
 `
 
 const Info = styled.div`
@@ -269,7 +272,7 @@ const Info = styled.div`
   margin-bottom: 12px;
   margin-top: -12px;
   /* margin-top: 16px; */
-  background-color: ${props => '#f1f2f6'};
+  background-color: ${props => '#000'};
   a {
     color: ${props => props.theme.uniswapPink};
     text-decoration: none;

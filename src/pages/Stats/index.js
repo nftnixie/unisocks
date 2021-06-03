@@ -11,13 +11,13 @@ export default function Body({ totalSupply, reserveSOCKSToken, ready, balanceSOC
     <AppWrapper overlay={state.visible}>
       <Header totalSupply={totalSupply} ready={ready} balanceSOCKS={balanceSOCKS} setShowConnect={() => {}} />
       <Content>
-        <Title>SOCKS Stats</Title>
+        <Title>NIXIE Stats</Title>
         <Description>
           <p>
             <span role="img" aria-label="socks">
               🧦
             </span>
-            Initial SOCKS
+            Initial NIXIE
           </p>
           <p>500</p>
         </Description>
@@ -26,7 +26,7 @@ export default function Body({ totalSupply, reserveSOCKSToken, ready, balanceSOC
             <span role="img" aria-label="socks">
               🔥
             </span>
-            Redeemed SOCKS
+            Redeemed NIXIE
           </p>
           <p>{500 - totalSupply}</p>
         </Description>
@@ -35,17 +35,17 @@ export default function Body({ totalSupply, reserveSOCKSToken, ready, balanceSOC
             <span role="img" aria-label="socks">
               💦
             </span>
-            SOCKS Pool
+            NIXIE Pool
           </p>
           <p>{amountFormatter(reserveSOCKSToken, 18, 0)}</p>
         </Description>
         <Shim />
         <Footer>
-          The price of SOCKS changes when tokens are bought and sold.
+          The price of NIXIE changes when tokens are bought and sold.
           <br />
           <br />
           <a
-            href="https://medium.com/frst/money-laundry-the-rise-of-the-crypto-sock-market-f979aafc3796"
+            href="https://nftnixie.com"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -65,7 +65,7 @@ const Footer = styled.p`
 
   a {
     text-decoration: none;
-    color: #fe6dde;
+    color: #dfba3f;
     margin-bottom: 1rem;
   }
 `
@@ -76,7 +76,7 @@ const Shim = styled.div`
 
 const AppWrapper = styled.div`
   width: 100vw;
-  height: 100%;
+  height: 100vw;
   margin: 0px auto;
   margin-bottom: 1rem;
   display: flex;
@@ -86,6 +86,7 @@ const AppWrapper = styled.div`
   overflow: ${props => (props.overlay ? 'hidden' : 'scroll')};
   scroll-behavior: smooth;
   position: ${props => (props.overlay ? 'fixed' : 'initial')};
+  background-color: #000;
 `
 
 const Content = styled.div`
@@ -93,7 +94,7 @@ const Content = styled.div`
   max-width: 375px;
   margin-top: 72px;
   background: #000000;
-  background: linear-gradient(162.92deg, #2b2b2b 12.36%, #000000 94.75%);
+  background: linear-gradient(162.92deg, #2b2b2b 12.36%, #000 94.75%);
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.4);
   display: flex;
   flex-direction: column;

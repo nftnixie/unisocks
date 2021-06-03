@@ -16,10 +16,10 @@ export default createGlobalStyle`
 `
 
 const theme = {
-  uniswapPink: '#FE6DDE',
+  uniswapPink: '#dfba3f',
   primary: '#2B2B2B',
   secondary: '#F1F2F6',
-  text: '#000',
+  text: '#ccc',
   textDisabled: '#737373',
   orange: '#CF2C0A',
   green: '#66BB66',
